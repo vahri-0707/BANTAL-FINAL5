@@ -21,7 +21,7 @@ public class LoginPageBantal extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLpendaftaran.fxml"));
         
         Scene scene = new Scene(root);
         

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,7 +20,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tfNama" layoutX="58.0" layoutY="218.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfNama" layoutX="58.0" layoutY="218.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
@@ -29,33 +30,33 @@
             <Image url="@../gambar/2853458.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="tfEmail" layoutX="58.0" layoutY="287.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfEmail" layoutX="58.0" layoutY="287.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="tfpassword" layoutX="58.0" layoutY="357.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfpassword" layoutX="58.0" layoutY="357.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="tfTanggalLahir" layoutX="58.0" layoutY="426.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfTanggalLahir" layoutX="58.0" layoutY="426.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
       <ChoiceBox fx:id="tfRiwayat" layoutX="362.0" layoutY="217.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-      <TextField fx:id="tfPekerjaan" layoutX="362.0" layoutY="287.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfPekerjaan" layoutX="362.0" layoutY="287.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="tfNoHP" layoutX="362.0" layoutY="357.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tfNoHP" layoutX="362.0" layoutY="357.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="tKota" layoutX="362.0" layoutY="426.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
+      <TextField fx:id="tKota" layoutX="362.0" layoutY="426.0" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;">
          <font>
             <Font size="16.0" />
          </font>
@@ -66,8 +67,11 @@
                <font>
                   <Font size="17.0" />
                </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="kelam" />
+               </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbWanita" layoutX="139.0" layoutY="11.0" mnemonicParsing="false" text="Perempuan">
+            <RadioButton fx:id="rbWanita" layoutX="139.0" layoutY="11.0" mnemonicParsing="false" text="Perempuan" toggleGroup="$kelam">
                <font>
                   <Font size="17.0" />
                </font>
@@ -79,7 +83,7 @@
             <Font name="Avenir Next Bold" size="40.0" />
          </font>
       </Text>
-      <Button fx:id="bSimpan" layoutX="362.0" layoutY="504.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: #5dd1a9;" text="Simpan">
+      <Button fx:id="SImpan" layoutX="362.0" layoutY="504.0" mnemonicParsing="false" onAction="#simpanButton" prefHeight="34.0" prefWidth="274.0" style="-fx-background-color: #5dd1a9;" text="Simpan">
          <font>
             <Font name="PT Sans" size="17.0" />
          </font>

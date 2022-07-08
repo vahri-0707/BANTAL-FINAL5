@@ -4,8 +4,15 @@
  */
 package loginpagebantal;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +25,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -27,102 +35,137 @@ import javafx.stage.Stage;
  */
 public class PendaftaranController implements Initializable {
 
-  
+
     
-//   TextField
+     @FXML
+    private Button SImpan;
+
     @FXML
-    private TextField tfNama;
-    
+    private ToggleGroup kelam;
+
     @FXML
-    private TextField tfEmail;
-    
-    @FXML
-    private TextField tfPekerjaan;
-    
-    @FXML
-    private TextField tfRiwayat;
-    
-    @FXML
-    private TextField tKota;
-    
-    @FXML
-    private TextField tfpassword;
-    
-    @FXML
-    private TextField tfTanggalLahir;
-    
-    @FXML
-    private TextField tfNoHP;
-   
-//   RadioButton
+    private Label label;
+
     @FXML
     private RadioButton rbPria;
-    
+
     @FXML
     private RadioButton rbWanita;
-    
-//  ChoiceBox
+
+    @FXML
+    private TextField tKota;
+
+    @FXML
+    private TextField tfEmail;
+
+    @FXML
+    private TextField tfNama;
+
+    @FXML
+    private TextField tfNoHP;
+
+    @FXML
+    private TextField tfPekerjaan;
+
+    @FXML
+    private ChoiceBox tfRiwayat;
+
+    @FXML
+    private TextField tfTanggalLahir;
+
+    @FXML
+    private TextField tfpassword;
+
    
-    public String getTfNama() {
-        return tfNama.getText();
-    }
-
-    public String  getTfEmail() {
-        return tfEmail.getText();
-    }
-
-    public String getTfPekerjaan() {
-        return tfPekerjaan.getText();
-    }
-
-    public String  getTfRiwayat() {
-        return tfRiwayat.getText();
-    }
-
-    public String gettKota() {
-        return tKota.getText();
-    }
-
-    public String  getTfProv() {
-        return tfpassword.getText();
-    }
-
-    public String  getTfTanggalLahir() {
-        return tfTanggalLahir.getText();
-    }
-
-    public String getTfNoHP() {
-        return tfNoHP.getText();
-    }
-
-    public Boolean getRbPria() {
-        return rbPria.isSelected();
-    }
-
-    public Boolean getRbWanita() {
-        return rbWanita.isSelected();
-    }
     
+       
+        
     
+
+//  ChoiceBox
+    private String Nama, Email, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin;
+    XStream xstream = new XStream(new StaxDriver());
+
+    ArrayList<Daftar> listpendaftaran = new ArrayList<>();
+
+    
+      @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    
+     tfRiwayat.getItems().addAll("Iya" , "Tidak ");
+        
+     OpenXml();
+    
+    }
     
     @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException {
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+    public void simpanButton(ActionEvent event) throws IOException {
+
+        File f = new File("Listpendaftaran.xml");
+        if (f.exists() && !f.isDirectory()) {
+            System.out.println("file nya adaaa");
+            OpenXml();
+        }
+
+        if (rbPria.isSelected()) {
+            Jkelamin = "Laki - Laki";
+        } else {
+            Jkelamin = "Perempuan";
+        }
+
+        Nama = (String) tfNama.getText();
+        Email = (String) tfEmail.getText();
+        Password = (String) tfpassword.getText();
+        TanggalLahir = (String) tfTanggalLahir.getText();
+        Riwayatkesehatan =  (String) tfRiwayat.getValue();
+        Pekerjaan = (String) tfPekerjaan.getText();
+        nomorhp = (String) tfNoHP.getText();
+        kotadankab = (String) tKota.getText();
+        listpendaftaran.add(new Daftar(Nama, Email, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin));
+        SaveAndCreate();
+
+    
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLprofil.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);    
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Dashboard");
         stage.show();
-        
-    }
     
-    
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+
+       
         // TODO
     }    
-    
+    void OpenXml() {
+        FileInputStream inputDoc;
+
+        try {
+            inputDoc = new FileInputStream("Listpendaftaran.xml");
+            int content;
+            char c;
+            String s = "";
+            while ((content = inputDoc.read()) != -1) {
+                c = (char) content;
+                s += c;
+            }
+
+            listpendaftaran = (ArrayList<Daftar>) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+}
+      void SaveAndCreate() {
+        FileOutputStream outputDoc;
+        String xml = xstream.toXML(listpendaftaran);
+        File f = new File("Listpendaftaran.xml");
+        try {
+            byte[] data = xml.getBytes();
+            outputDoc = new FileOutputStream("Listpendaftaran.xml");
+            outputDoc.write(data);
+            outputDoc.close();
+            System.out.println("add data success");
+        } catch (Exception error) {
+            System.err.println("An error occur: " + error.getMessage());
+        }
+    }
 }
