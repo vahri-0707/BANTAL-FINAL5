@@ -32,6 +32,8 @@ import javafx.scene.layout.Pane;
  * @author user
  */
 public class FXMLmemantauPerkembanganChartController implements Initializable {
+    int adhd, bipolar,psikotik;
+
     XStream xstream = new XStream(new StaxDriver());
     ArrayList<DataMood> datamood = new ArrayList<DataMood>();
     DataMood data;
@@ -40,12 +42,19 @@ public class FXMLmemantauPerkembanganChartController implements Initializable {
     XYChart.Series cemas = new XYChart.Series<>();
     
     XYChart.Series durasi = new XYChart.Series<>();
+    
+    ObservableList<PieChart.Data> dataGejala =FXCollections.observableArrayList();
 
     @FXML
     private LineChart chartMood;
     
     @FXML
     private LineChart cdurasi;
+    
+    @FXML
+    private PieChart pcGejala;
+    
+    
     
     
     
@@ -87,6 +96,27 @@ public class FXMLmemantauPerkembanganChartController implements Initializable {
         }
         cdurasi.getData().addAll(durasi);
         
+        for(int i = 0; i<datamood.size();i++){
+            data = (DataMood) datamood.get(i);
+            if(data.isAdhd()==true){
+               adhd++;
+            }
+            else if(data.isGejala()==true){
+                psikotik++;
+            }
+            else if(data.isLedakan()==true){
+                bipolar++;
+            }
+        }
+        dataGejala.add(new PieChart.Data("ADHD", adhd));
+        dataGejala.add(new PieChart.Data("Psikotik", psikotik));
+        dataGejala.add(new PieChart.Data("Bipolar", bipolar));
+        pcGejala.setData(dataGejala);
+        
+        
+        
+        
+        
         
         
         
@@ -109,6 +139,7 @@ public class FXMLmemantauPerkembanganChartController implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        
     }
 }
 
