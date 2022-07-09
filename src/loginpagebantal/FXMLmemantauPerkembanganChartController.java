@@ -38,9 +38,14 @@ public class FXMLmemantauPerkembanganChartController implements Initializable {
     XYChart.Series depresi = new XYChart.Series<>();
     XYChart.Series tinggi = new XYChart.Series<>();
     XYChart.Series cemas = new XYChart.Series<>();
+    
+    XYChart.Series durasi = new XYChart.Series<>();
 
     @FXML
     private LineChart chartMood;
+    
+    @FXML
+    private LineChart cdurasi;
     
     
     
@@ -74,6 +79,17 @@ public class FXMLmemantauPerkembanganChartController implements Initializable {
         }
         
         chartMood.getData().addAll(depresi,tinggi,cemas);
+        
+        durasi.setName("Durasti tidur (jam)");
+        for(int i = 0; i<datamood.size();i++){
+            data = (DataMood) datamood.get(i);
+            durasi.getData().add(new XYChart.Data(data.getTanggal().toString(), data.getDurasiTidur()));
+        }
+        cdurasi.getData().addAll(durasi);
+        
+        
+        
+        
         
     }    
     void OpenXml() {

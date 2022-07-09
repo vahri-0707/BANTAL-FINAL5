@@ -25,6 +25,14 @@
                   <Font name="PT Sans" size="18.0" />
                </font>
             </Label>
+            <LineChart fx:id="cdurasi" layoutX="2.0" layoutY="91.0" prefHeight="207.0" prefWidth="282.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
          </children>
       </Pane>
       <Pane layoutX="327.0" layoutY="17.0" prefHeight="298.0" prefWidth="298.0" style="-fx-background-radius: 10; -fx-background-color: white;">
@@ -55,7 +63,7 @@
                   <Font name="PT Sans" size="18.0" />
                </font>
             </Label>
-            <LineChart fx:id="chartMood" layoutX="14.0" layoutY="77.0" prefHeight="207.0" prefWidth="269.0">
+            <LineChart fx:id="chartMood" layoutY="91.0" prefHeight="207.0" prefWidth="269.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
