@@ -20,7 +20,7 @@
          </font></Button>
       <Pane layoutX="794.0" layoutY="363.0" prefHeight="53.0" prefWidth="362.0" style="-fx-background-color: #E9EBE9; -fx-background-radius: 8;">
          <children>
-            <TextField fx:id="nama" alignment="BOTTOM_LEFT" layoutX="44.0" layoutY="6.0" minHeight="-Infinity" onAction="#handleButtonAction" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #E9EBE9 #E9EBE9;">
+            <TextField fx:id="nama" alignment="BOTTOM_LEFT" layoutX="44.0" layoutY="6.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #E9EBE9 #E9EBE9;">
                <font>
                   <Font name="PT Sans" size="14.0" />
                </font>
@@ -43,7 +43,7 @@
                   <Image url="@../gambar/padlock.png" />
                </image>
             </ImageView>
-            <TextField fx:id="password" alignment="BOTTOM_LEFT" layoutX="42.0" layoutY="6.0" maxHeight="-Infinity" minHeight="-Infinity" onAction="#handleButtonAction" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #E9EBE9 #E9EBE9;">
+            <TextField fx:id="password" alignment="BOTTOM_LEFT" layoutX="42.0" layoutY="6.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #E9EBE9 #E9EBE9;">
                <font>
                   <Font name="PT Sans" size="14.0" />
                </font>

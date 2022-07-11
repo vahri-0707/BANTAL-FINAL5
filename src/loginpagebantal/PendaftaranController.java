@@ -121,7 +121,7 @@ public class PendaftaranController implements Initializable {
         Pekerjaan = (String) tfPekerjaan.getText();
         nomorhp = (String) tfNoHP.getText();
         kotadankab = (String) tKota.getText();
-        listpendaftaranPasien.add(new Daftar(Nama, Email, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin));
+        listpendaftaranPasien.add(new Daftar(Email,Nama, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin));
         SaveAndCreate();
 
     

@@ -22,7 +22,7 @@ public class LoginPageBantal extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLPendaftaran2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         stage.getIcons().add(new Image("gambar/mindLogo.png"));

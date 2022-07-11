@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-color: #eaf5e8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="loginpagebantal.FXMLPilihanPendaftaranController">
+<AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-color: #eaf5e8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLPilihanPendaftaranController">
    <children>
       <Pane layoutX="79.0" layoutY="58.0" prefHeight="620.0" prefWidth="1038.0" style="-fx-background-color: #F9FCF8; -fx-background-radius: 20;">
          <effect>
@@ -27,7 +26,14 @@
                   <Image url="@../gambar/Untitled%20design-5.png" />
                </image>
             </ImageView>
-            <Button layoutX="101.0" layoutY="113.0" mnemonicParsing="false" prefHeight="177.0" prefWidth="404.0" style="-fx-background-color: #5DD1A9; -fx-background-radius: 20;" />
+            <Button fx:id="pasien" layoutX="101.0" layoutY="113.0" mnemonicParsing="false" onAction="#scenePasien" prefHeight="177.0" prefWidth="404.0" style="-fx-background-color: #5DD1A9; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
             <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="121.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../gambar/dizziness.png" />
@@ -38,7 +44,14 @@
                   <Font name="PT Sans" size="36.0" />
                </font>
             </Text>
-            <Button layoutX="101.0" layoutY="329.0" mnemonicParsing="false" prefHeight="177.0" prefWidth="404.0" style="-fx-background-color: #5DD1A9; -fx-background-radius: 20;" />
+            <Button fx:id="tenagaAhli" layoutX="101.0" layoutY="329.0" mnemonicParsing="false" onAction="#sceneTenagaAhli" prefHeight="177.0" prefWidth="404.0" style="-fx-background-color: #5DD1A9; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
             <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="121.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../gambar/doctor.png" />

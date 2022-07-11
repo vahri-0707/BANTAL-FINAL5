@@ -120,7 +120,7 @@ XStream xstream = new XStream(new StaxDriver());
 
     @FXML
     private void scene3(ActionEvent event) throws IOException {
-        Parent scene2 = FXMLLoader.load(getClass().getResource("FXMLpendaftaran.fxml"));
+        Parent scene2 = FXMLLoader.load(getClass().getResource("FXMLPilihanPendaftaran.fxml"));
         Scene scene = new Scene(scene2);
         Stage stage = new Stage();
         stage.setScene(scene);
