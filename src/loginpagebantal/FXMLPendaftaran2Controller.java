@@ -11,8 +11,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,12 +29,15 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author user
+ * @author vahrimaulana
  */
-public class PendaftaranController implements Initializable {
+public class FXMLPendaftaran2Controller implements Initializable {
 
-
+    /**
+     * Initializes the controller class.
+     */
     
+       
      @FXML
     private Button SImpan;
 
@@ -65,10 +66,10 @@ public class PendaftaranController implements Initializable {
     private TextField tfNoHP;
 
     @FXML
-    private TextField tfPekerjaan;
+    private TextField tfPengalamanKerja;
 
     @FXML
-    private ChoiceBox tfRiwayat;
+    private ChoiceBox tfJenjangPendidikan;
 
     @FXML
     private TextField tfTanggalLahir;
@@ -83,16 +84,16 @@ public class PendaftaranController implements Initializable {
     
 
 //  ChoiceBox
-    private String Nama, Email, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin;
+    private String Nama, Email, Password, TanggalLahir,PengalamanKerja,JenjangPendidikan, nomorhp, kotadankab, Jkelamin;
     XStream xstream = new XStream(new StaxDriver());
 
-    ArrayList<Daftar> listpendaftaranPasien = new ArrayList<>();
+    java.util.ArrayList<DaftarTenagaAhli> listpendaftaranTenagaAhli = new java.util.ArrayList<>();
 
     
       @Override
     public void initialize(URL url, ResourceBundle rb) {
     
-     tfRiwayat.getItems().addAll("Iya" , "Tidak ");
+     tfJenjangPendidikan.getItems().addAll(" Diploma 3(D3)" , " Sarjana (S1) " , " Magister (S2) " , " Doktor (S3) ");
         
      OpenXml();
     
@@ -101,7 +102,7 @@ public class PendaftaranController implements Initializable {
     @FXML
     public void simpanButton(ActionEvent event) throws IOException {
 
-        File f = new File("Listpendaftaranpasien.xml");
+        File f = new File("ListpendaftarantenagaAhli.xml");
         if (f.exists() && !f.isDirectory()) {
             System.out.println("file nya adaaa");
             OpenXml();
@@ -117,11 +118,11 @@ public class PendaftaranController implements Initializable {
         Email = (String) tfEmail.getText();
         Password = (String) tfpassword.getText();
         TanggalLahir = (String) tfTanggalLahir.getText();
-        Riwayatkesehatan =  (String) tfRiwayat.getValue();
-        Pekerjaan = (String) tfPekerjaan.getText();
+        JenjangPendidikan =  (String) tfJenjangPendidikan.getValue();
+        JenjangPendidikan = (String) tfPengalamanKerja.getText();
         nomorhp = (String) tfNoHP.getText();
         kotadankab = (String) tKota.getText();
-        listpendaftaranPasien.add(new Daftar(Nama, Email, Password, TanggalLahir, Riwayatkesehatan, Pekerjaan, nomorhp, kotadankab, Jkelamin));
+        listpendaftaranTenagaAhli.add(new DaftarTenagaAhli(Nama, Email, Password, TanggalLahir, PengalamanKerja, JenjangPendidikan, nomorhp, kotadankab, Jkelamin));
         SaveAndCreate();
 
     
@@ -140,7 +141,7 @@ public class PendaftaranController implements Initializable {
         FileInputStream inputDoc;
 
         try {
-            inputDoc = new FileInputStream("Listpendaftaranpasien.xml");
+            inputDoc = new FileInputStream("ListpendaftarantenagaAhli.xml");
             int content;
             char c;
             String s = "";
@@ -149,18 +150,18 @@ public class PendaftaranController implements Initializable {
                 s += c;
             }
 
-            listpendaftaranPasien = (ArrayList<Daftar>) xstream.fromXML(s);
+            listpendaftaranTenagaAhli = (java.util.ArrayList<DaftarTenagaAhli>) xstream.fromXML(s);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 }
       void SaveAndCreate() {
         FileOutputStream outputDoc;
-        String xml = xstream.toXML(listpendaftaranPasien);
-        File f = new File("Listpendaftaranpasien.xml");
+        String xml = xstream.toXML(listpendaftaranTenagaAhli);
+        File f = new File("ListpendaftarantenagaAhli.xml");
         try {
             byte[] data = xml.getBytes();
-            outputDoc = new FileOutputStream("Listpendaftaranpasien.xml");
+            outputDoc = new FileOutputStream("ListpendaftarantenagaAhli.xml");
             outputDoc.write(data);
             outputDoc.close();
             System.out.println("add data success");
@@ -169,3 +170,4 @@ public class PendaftaranController implements Initializable {
         }
     }
 }
+

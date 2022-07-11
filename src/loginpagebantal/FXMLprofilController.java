@@ -62,7 +62,7 @@ public class FXMLprofilController implements Initializable {
     private TextField Jenkelamin;
     
 
-    ArrayList< Daftar > listkon = new ArrayList <Daftar> ();
+    ArrayList< Daftar > listpendaftaranpsn = new ArrayList <Daftar> ();
    
     XStream xstream = new XStream(new StaxDriver());
 
@@ -71,7 +71,7 @@ public class FXMLprofilController implements Initializable {
         FileInputStream berkasMasuk;
 
         try {
-            berkasMasuk = new FileInputStream("Listpendaftaran.xml");
+            berkasMasuk = new FileInputStream("Listpendaftaranpasien.xml");
             int isi;
             char c;
             String s = "";
@@ -81,18 +81,18 @@ public class FXMLprofilController implements Initializable {
                 s = s + c;
 
             }
-            listkon = (ArrayList<Daftar>) xstream.fromXML(s);
+            listpendaftaranpsn = (ArrayList<Daftar>) xstream.fromXML(s);
         } catch (Exception e) {
             System.out.println("terjadi kkesallahn");
         }
     }
         
           void simpanData() {
-        String xml = xstream.toXML(listkon);
+        String xml = xstream.toXML(listpendaftaranpsn);
         FileOutputStream outDoc;
         try {
             byte[] data = xml.getBytes("UTF-8");
-            outDoc = new FileOutputStream("Listpendaftaran.xml");
+            outDoc = new FileOutputStream("Listpendaftaranpasien.xml");
             outDoc.write(data);
             outDoc.close();
         } catch (Exception io) {
@@ -107,16 +107,16 @@ public class FXMLprofilController implements Initializable {
      
        OpenData();
       simpanData();
-      File f = new File("Listpendaftaran.xml");
+      File f = new File("Listpendaftaranpasien.xml");
       if (f.exists() && !f.isDirectory()){
           OpenData();
       }
       
-      for (int i = 0 ;i<listkon.size();i++){
-          System.out.println(listkon.toString());
+      for (int i = 0 ;i<listpendaftaranpsn.size();i++){
+          System.out.println(listpendaftaranpsn.toString());
       }
       
-      Daftar p = listkon.get(0);
+      Daftar p = listpendaftaranpsn.get(0);
       tfNama.setText(p.getNama());
       tfEmail.setText(p.getEmail());
       tfpassword.setText(p.getPassword());
