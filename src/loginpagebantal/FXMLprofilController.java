@@ -65,6 +65,7 @@ public class FXMLprofilController implements Initializable {
     ArrayList< Daftar > listpendaftaranpsn = new ArrayList <Daftar> ();
    
     XStream xstream = new XStream(new StaxDriver());
+    Indeks ind;
 
     void OpenData() {
 
@@ -87,7 +88,7 @@ public class FXMLprofilController implements Initializable {
         }
     }
         
-          void simpanData() {
+        void simpanData() {
         String xml = xstream.toXML(listpendaftaranpsn);
         FileOutputStream outDoc;
         try {
@@ -100,6 +101,26 @@ public class FXMLprofilController implements Initializable {
         }
         System.out.println("Data sudah disimpan");
     }
+        void OpenIndeks() {
+
+        FileInputStream berkasMasuk;
+
+        try {
+            berkasMasuk = new FileInputStream("Indeks.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != -1) {
+
+                c = (char) isi;
+                s = s + c;
+
+            }
+            ind = (Indeks) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println("terjadi kkesallahn");
+        }
+    }
     
 
     @Override
@@ -107,16 +128,15 @@ public class FXMLprofilController implements Initializable {
      
        OpenData();
       simpanData();
-      File f = new File("Listpendaftaranpasien.xml");
-      if (f.exists() && !f.isDirectory()){
-          OpenData();
-      }
+      OpenIndeks();
+
+       
       
       for (int i = 0 ;i<listpendaftaranpsn.size();i++){
           System.out.println(listpendaftaranpsn.toString());
       }
       
-      Daftar p = listpendaftaranpsn.get(0);
+      Daftar p = listpendaftaranpsn.get(ind.getInd());
       tfNama.setText(p.getNama());
       tfEmail.setText(p.getEmail());
       tfpassword.setText(p.getPassword());

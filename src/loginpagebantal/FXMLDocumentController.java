@@ -3,7 +3,9 @@ package loginpagebantal;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 import java.awt.Desktop;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -52,6 +54,7 @@ public class FXMLDocumentController implements Initializable {
     
     Daftar dataPasien;
     DaftarTenagaAhli dataTenagaAhli;
+    Indeks ind;
 
     @FXML
     private TextField nama;
@@ -88,6 +91,19 @@ XStream xstream = new XStream(new StaxDriver());
         for(int i = 0; i<listpendaftaranPasien.size();i++){
             dataPasien = listpendaftaranPasien.get(i);
             if(nama.getText().equals(dataPasien.getEmail()) && password.getText().equals(dataPasien.getPassword())){
+                ind = new Indeks(i);
+                FileOutputStream outputDoc;
+                String xml = xstream.toXML(ind);
+                 File f = new File("Indeks.xml");
+                try {
+                    byte[] data = xml.getBytes();
+                    outputDoc = new FileOutputStream("Indeks.xml");
+                    outputDoc.write(data);
+                    outputDoc.close();
+                    System.out.println("add data success");
+                } catch (Exception error) {
+                    System.err.println("An error occur: " + error.getMessage());
+                }
                 Parent scene2 = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
                 Scene scene = new Scene(scene2);
                 Stage stage = new Stage();
