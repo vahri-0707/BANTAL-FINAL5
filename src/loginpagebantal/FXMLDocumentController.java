@@ -118,8 +118,8 @@ XStream xstream = new XStream(new StaxDriver());
         for(int i = 0; i<listpendaftaranTenagaAhli.size();i++){
             dataTenagaAhli = listpendaftaranTenagaAhli.get(i);
             if(nama.getText().equals(dataTenagaAhli.getEmail()) && password.getText().equals(dataTenagaAhli.getPassword())){
-                Parent scene2 = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
-                Scene scene = new Scene(scene2);
+                Parent scene3 = FXMLLoader.load(getClass().getResource("FXMLDashboardTenagaAhli.fxml"));
+                Scene scene = new Scene(scene3);
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.setTitle("Dashboard");
