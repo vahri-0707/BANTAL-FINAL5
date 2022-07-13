@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLHomePageController">
+   <children>
+      <ImageView fitHeight="804.0" fitWidth="1206.0" layoutX="-6.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/4964089.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="87.0" fitWidth="257.0" layoutX="38.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/LogoBantal.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="657.0" layoutY="29.0" mnemonicParsing="false" opacity="0.0" style="-fx-background-color: white;" text="Halaman Utama" textFill="#5dd1a9">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="802.0" layoutY="29.0" mnemonicParsing="false" opacity="0.0" style="-fx-background-color: white;" text="Tentang Kami">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="933.0" layoutY="29.0" mnemonicParsing="false" opacity="0.0" style="-fx-background-color: white;" text="Kontak Kami">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="1056.0" layoutY="29.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: #5dd1a9;" text="Login">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="624.0" fitWidth="936.0" layoutX="-153.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/portrait-hansome-young-male-doctor-man__1_-removebg.png" />
+         </image>
+      </ImageView>
+      <Text fill="#5dd1a9" layoutX="668.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Halaman Utama">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font></Text>
+      <Text layoutX="813.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tentang Kami">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="944.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontak Kami">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Text>
+      </children>
+</AnchorPane>
