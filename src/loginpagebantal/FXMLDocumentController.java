@@ -45,6 +45,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Button loginGoogle;
+    
+    @FXML
+    private Label gagal;
 
     java.util.ArrayList<Daftar> listpendaftaranPasien = new java.util.ArrayList<>();
 
@@ -74,10 +77,16 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void scene2(ActionEvent event) throws IOException {
+        
+        
 
         for (int i = 0; i < listpendaftaranPasien.size(); i++) {
             dataPasien = listpendaftaranPasien.get(i);
-            if (nama.getText().equals(dataPasien.getEmail()) && password.getText().equals(dataPasien.getPassword())) {
+            if(nama.getText().equals("") && password.getText().equals("")){
+                gagal.setText("Gagal Login maszeh :p");
+                break;
+            }
+            else if (nama.getText().equals(dataPasien.getEmail()) && password.getText().equals(dataPasien.getPassword())) {
                 ind = new Indeks(i);
                 FileOutputStream outputDoc;
                 String xml = xstream.toXML(ind);
@@ -99,25 +108,28 @@ public class FXMLDocumentController implements Initializable {
                 stage.show();
                 Stage Keluar = (Stage) login.getScene().getWindow();
                 Keluar.close();
-            } else {
-                System.out.println("gagal Login");
+            
+            } 
+            else{
+                gagal.setText("Gagal Login maszeh :p");
+                break; 
             }
         }
-        for (int i = 0; i < listpendaftaranTenagaAhli.size(); i++) {
-            dataTenagaAhli = listpendaftaranTenagaAhli.get(i);
-            if (nama.getText().equals(dataTenagaAhli.getEmail()) && password.getText().equals(dataTenagaAhli.getPassword())) {
-                Parent scene3 = FXMLLoader.load(getClass().getResource("FXMLDashboardTenagaAhli.fxml"));
-                Scene scene = new Scene(scene3);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.setTitle("Dashboard");
-                stage.show();
-                Stage Keluar = (Stage) login.getScene().getWindow();
-                Keluar.close();
-            } else {
-                System.out.println("gagal Login");
-            }
-        }
+//        for (int i = 0; i < listpendaftaranTenagaAhli.size(); i++) {
+//            dataTenagaAhli = listpendaftaranTenagaAhli.get(i);
+//            if (nama.getText().equals(dataTenagaAhli.getEmail()) && password.getText().equals(dataTenagaAhli.getPassword())) {
+//                Parent scene3 = FXMLLoader.load(getClass().getResource("FXMLDashboardTenagaAhli.fxml"));
+//                Scene scene = new Scene(scene3);
+//                Stage stage = new Stage();
+//                stage.setScene(scene);
+//                stage.setTitle("Dashboard");
+//                stage.show();
+//                Stage Keluar = (Stage) login.getScene().getWindow();
+//                Keluar.close();
+//            } else {
+//                System.out.println("gagal Login");
+//            }
+//        }
 
     }
 
