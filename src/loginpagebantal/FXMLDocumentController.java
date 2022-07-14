@@ -86,7 +86,7 @@ public class FXMLDocumentController implements Initializable {
                 gagal.setText("Gagal Login maszeh :p");
                 break;
             }
-            else if (nama.getText().equals(dataPasien.getEmail()) && password.getText().equals(dataPasien.getPassword())) {
+            if (nama.getText().equals(dataPasien.getEmail()) && password.getText().equals(dataPasien.getPassword())) {
                 ind = new Indeks(i);
                 FileOutputStream outputDoc;
                 String xml = xstream.toXML(ind);
@@ -112,7 +112,7 @@ public class FXMLDocumentController implements Initializable {
             } 
             else{
                 gagal.setText("Gagal Login maszeh :p");
-                break; 
+                 
             }
         }
 //        for (int i = 0; i < listpendaftaranTenagaAhli.size(); i++) {
