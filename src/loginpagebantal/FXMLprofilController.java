@@ -34,8 +34,12 @@ import javafx.stage.Stage;
  * @author user
  */
 public class FXMLprofilController implements Initializable {
-  @FXML
-    private TextField  tfNama;
+
+    
+    @FXML
+    private Button logout ;
+    @FXML
+    private TextField tfNama;
 
     @FXML
     private TextField tfEmail;
@@ -57,15 +61,26 @@ public class FXMLprofilController implements Initializable {
 
     @FXML
     private TextField tfNoHP;
-    
-     @FXML
-    private TextField Jenkelamin;
-    
 
-    ArrayList< Daftar > listpendaftaranpsn = new ArrayList <Daftar> ();
-   
+    @FXML
+    private TextField Jenkelamin;
+
+    ArrayList< Daftar> listpendaftaranpsn = new ArrayList<Daftar>();
+
     XStream xstream = new XStream(new StaxDriver());
     Indeks ind;
+    
+     @FXML
+    private void keluar(ActionEvent event) throws IOException {
+        Parent scene2 = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Scene scene = new Scene(scene2);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Daftar");
+        stage.show();
+        Stage Keluar = (Stage) logout.getScene().getWindow();
+        Keluar.close();
+    }
 
     void OpenData() {
 
@@ -87,8 +102,8 @@ public class FXMLprofilController implements Initializable {
             System.out.println("terjadi kkesallahn");
         }
     }
-        
-        void simpanData() {
+
+    void simpanData() {
         String xml = xstream.toXML(listpendaftaranpsn);
         FileOutputStream outDoc;
         try {
@@ -101,7 +116,8 @@ public class FXMLprofilController implements Initializable {
         }
         System.out.println("Data sudah disimpan");
     }
-        void OpenIndeks() {
+
+    void OpenIndeks() {
 
         FileInputStream berkasMasuk;
 
@@ -121,34 +137,29 @@ public class FXMLprofilController implements Initializable {
             System.out.println("terjadi kkesallahn");
         }
     }
-    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-     
-       OpenData();
-      simpanData();
-      OpenIndeks();
 
-       
-      
-      for (int i = 0 ;i<listpendaftaranpsn.size();i++){
-          System.out.println(listpendaftaranpsn.toString());
-      }
-      
-      Daftar p = listpendaftaranpsn.get(ind.getInd());
-      tfNama.setText(p.getNama());
-      tfEmail.setText(p.getEmail());
-      tfpassword.setText(p.getPassword());
-      tfTanggalLahir.setText(p.getTanggallahir());
-      tfRiwayat.setText(p.getRiwayatKesehatan());
-      tfPekerjaan.setText(p.getPekerjaan());
-      tfNoHP.setText(p.getNomorhp());
-      tKota.setText(p.getKabdankota());
-      Jenkelamin.setText(p.getJenisKelamin());
-      
-      
+        OpenData();
+        simpanData();
+        OpenIndeks();
+
+        for (int i = 0; i < listpendaftaranpsn.size(); i++) {
+            System.out.println(listpendaftaranpsn.toString());
+        }
+
+        Daftar p = listpendaftaranpsn.get(ind.getInd());
+        tfNama.setText(p.getNama());
+        tfEmail.setText(p.getEmail());
+        tfpassword.setText(p.getPassword());
+        tfTanggalLahir.setText(p.getTanggallahir());
+        tfRiwayat.setText(p.getRiwayatKesehatan());
+        tfPekerjaan.setText(p.getPekerjaan());
+        tfNoHP.setText(p.getNomorhp());
+        tKota.setText(p.getKabdankota());
+        Jenkelamin.setText(p.getJenisKelamin());
+
     }
 
 }
-

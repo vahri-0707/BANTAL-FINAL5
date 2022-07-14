@@ -542,11 +542,6 @@
                   <Font name="PT Sans" size="13.0" />
                </font>
             </Text>
-            <Button fx:id="loc12" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="132.0" mnemonicParsing="false" onAction="#loc12" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color: white;" text="      Lihat Map" textFill="#5dd1a9">
-               <font>
-                  <Font name="PT Sans" size="13.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../gambar/map-2.png" />
@@ -575,5 +570,10 @@
             </ImageView>
          </children>
       </Pane>
+      <Button fx:id="loc12" alignment="BASELINE_LEFT" layoutX="916.0" layoutY="743.0" mnemonicParsing="false" onAction="#loc12" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color: white;" text="      Lihat Map" textFill="#5dd1a9">
+         <font>
+            <Font name="PT Sans" size="13.0" />
+         </font>
+      </Button>
       </children>
 </AnchorPane>

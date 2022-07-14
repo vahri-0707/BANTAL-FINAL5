@@ -70,51 +70,51 @@
                   <Image url="@../gambar/map.png" />
                </image>
             </ImageView>
-            <TextField fx:id="tfTanggalLahir" layoutX="158.0" layoutY="271.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Text layoutX="61.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir">
+            <TextField fx:id="tfTanggalLahir" layoutX="158.0" layoutY="289.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
+            <Text layoutX="61.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir">
                <font>
                   <Font name="PT Sans" size="13.0" />
                </font></Text>
-            <TextField fx:id="tfEmail" layoutX="158.0" layoutY="321.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Text layoutX="61.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+            <TextField fx:id="tfEmail" layoutX="158.0" layoutY="331.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
+            <Text layoutX="59.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                <font>
                   <Font name="PT Sans" size="13.0" />
                </font>
             </Text>
-            <Text layoutX="60.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+            <Text layoutX="61.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
                <font>
                   <Font name="PT Sans" size="13.0" />
                </font>
             </Text>
-            <TextField fx:id="Jenkelamin" layoutX="157.0" layoutY="421.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Text layoutX="59.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin">
+            <TextField fx:id="Jenkelamin" layoutX="157.0" layoutY="430.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
+            <Text layoutX="59.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin">
                <font>
                   <Font name="PT Sans" size="13.0" />
                </font>
             </Text>
-            <TextField fx:id="tfNoHP" layoutX="157.0" layoutY="471.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Text layoutX="59.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Handphone">
+            <TextField fx:id="tfNoHP" layoutX="158.0" layoutY="481.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
+            <Text layoutX="61.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Handphone">
                <font>
                   <Font name="PT Sans" size="13.0" />
                </font>
             </Text>
-            <PasswordField fx:id="tfpassword" layoutX="157.0" layoutY="371.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Button layoutX="355.0" layoutY="275.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <PasswordField fx:id="tfpassword" layoutX="158.0" layoutY="381.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
+            <Button layoutX="356.0" layoutY="292.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="356.0" layoutY="325.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="334.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="356.0" layoutY="375.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="384.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="356.0" layoutY="475.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="484.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
@@ -157,6 +157,12 @@
                   <Font size="14.0" />
                </font>
             </TextField>
+            <Button fx:id="logout" layoutX="59.0" layoutY="258.0" mnemonicParsing="false" onAction="#keluar" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #4DD1A9;" text="Logout" />
+            <Button layoutX="356.0" layoutY="433.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+               <font>
+                  <Font name="PT Sans" size="9.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

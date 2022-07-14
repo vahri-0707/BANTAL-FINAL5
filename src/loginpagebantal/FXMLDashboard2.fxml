@@ -61,7 +61,7 @@
                               <Font name="PT Sans" size="18.0" />
                            </font>
                         </Text>
-                        <TableView layoutX="19.0" layoutY="50.0" prefHeight="200.0" prefWidth="848.0">
+                        <TableView layoutX="19.0" layoutY="50.0" prefHeight="200.0" prefWidth="848.0" stylesheets="@../css/csstableview.css">
                           <columns>
                             <TableColumn prefWidth="260.872314453125" text="Alamat" />
                             <TableColumn prefWidth="194.0" text="Keluhan" />
