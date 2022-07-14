@@ -4,6 +4,10 @@
  */
 package loginpagebantal;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +18,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -23,8 +32,55 @@ import javafx.stage.Stage;
  */
 public class FXMLProfilTenagaAhliController implements Initializable {
 
-   @FXML
-   private Button logout;
+    @FXML
+    private Button logout;
+    
+    @FXML
+    private Button SImpan;
+
+    @FXML
+    private ToggleGroup kelam;
+
+    @FXML
+    private Label label;
+
+    @FXML
+    private RadioButton rbPria;
+
+    @FXML
+    private RadioButton rbWanita;
+
+    @FXML
+    private TextField tKota;
+
+    @FXML
+    private TextField tfEmail;
+
+    @FXML
+    private TextField tfNama;
+
+    @FXML
+    private TextField tfNoHP;
+
+    @FXML
+    private TextField tfPengalamanKerja;
+
+    @FXML
+    private TextField tfJenjangPendidikan;
+
+    @FXML
+    private TextField tfTanggalLahir;
+
+    @FXML
+    private TextField tfpassword;
+    
+    @FXML
+    private TextField JenKelamin;
+    
+     java.util.ArrayList< DaftarTenagaAhli> listpendaftarantnahli = new java.util.ArrayList<DaftarTenagaAhli>();
+
+    XStream xstream = new XStream(new StaxDriver());
+    Indeks ind;
     
    
    @FXML
@@ -38,10 +94,84 @@ public class FXMLProfilTenagaAhliController implements Initializable {
         Stage Keluar = (Stage) logout.getScene().getWindow();
         Keluar.close();
     }
-   
-   @Override
+    
+      void OpenData() {
+
+        FileInputStream berkasMasuk;
+
+        try {
+            berkasMasuk = new FileInputStream("ListpendaftarantenagaAhli.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != -1) {
+
+                c = (char) isi;
+                s = s + c;
+
+            }
+            listpendaftarantnahli = (java.util.ArrayList<DaftarTenagaAhli>) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println("terjadi kkesallahn");
+        }
+    }
+
+    void simpanData() {
+        String xml = xstream.toXML(listpendaftarantnahli);
+        FileOutputStream outDoc;
+        try {
+            byte[] data = xml.getBytes("UTF-8");
+            outDoc = new FileOutputStream("ListpendaftarantenagaAhli.xml");
+            outDoc.write(data);
+            outDoc.close();
+        } catch (Exception io) {
+            System.err.println("An error occurs: " + io.getMessage());
+        }
+        System.out.println("Data sudah disimpan");
+    }
+
+    void OpenIndeks() {
+
+        FileInputStream berkasMasuk;
+
+        try {
+            berkasMasuk = new FileInputStream("Indeks.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != -1) {
+
+                c = (char) isi;
+                s = s + c;
+
+            }
+            ind = (Indeks) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println("terjadi kkesallahn");
+        }
+    }
+     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+
+        OpenData();
+        simpanData();
+        OpenIndeks();
+
+        for (int i = 0; i < listpendaftarantnahli.size(); i++) {
+            System.out.println(listpendaftarantnahli.toString());
+        }
+
+        DaftarTenagaAhli p = listpendaftarantnahli.get(ind.getInd());
+        tfNama.setText(p.getNama());
+        tfEmail.setText(p.getEmail());
+        tfpassword.setText(p.getPassword());
+        tfTanggalLahir.setText(p.getTanggalLahir());
+        tfPengalamanKerja.setText(p.getPengalamanKerja());
+        tfJenjangPendidikan.setText(p.getJenjangPendidikan());
+        tfNoHP.setText(p.getNomorhp());
+        tKota.setText(p.getKotadankab());
+        JenKelamin.setText(p.getJkelamin());
+
+    }
     
 }
