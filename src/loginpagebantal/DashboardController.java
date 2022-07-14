@@ -4,7 +4,10 @@
  */
 package loginpagebantal;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
 import java.awt.Desktop;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -17,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -30,6 +34,9 @@ public class DashboardController implements Initializable {
 
     @FXML
     private Button Dashboard;
+    
+    @FXML
+    private Label namaUser;
 
     @FXML
     private Button Lihatsemua;
@@ -65,6 +72,10 @@ public class DashboardController implements Initializable {
     private BorderPane mainPane;
 
     OpenScene bukaScene = new OpenScene();
+    java.util.ArrayList< Daftar > listpendaftaranPasien = new java.util.ArrayList <Daftar> ();
+   
+    XStream xstream = new XStream(new StaxDriver());
+    Indeks ind;
 
     @FXML
     private void Dashboardpsien(ActionEvent event) throws IOException {
@@ -137,7 +148,49 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        OpenIndeks();
+        OpenXml();
+        int indeks = ind.getInd();
+        Daftar p = listpendaftaranPasien.get(indeks);
+        namaUser.setText(p.getNama());
+    }
+    void OpenXml() {
+        FileInputStream inputDoc;
+
+        try {
+            inputDoc = new FileInputStream("Listpendaftaranpasien.xml");
+            int content;
+            char c;
+            String s = "";
+            while ((content = inputDoc.read()) != -1) {
+                c = (char) content;
+                s += c;
+            }
+
+            listpendaftaranPasien = (java.util.ArrayList<Daftar>) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    void OpenIndeks() {
+
+        FileInputStream berkasMasuk;
+
+        try {
+            berkasMasuk = new FileInputStream("Indeks.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != -1) {
+
+                c = (char) isi;
+                s = s + c;
+
+            }
+            ind = (Indeks) xstream.fromXML(s);
+        } catch (Exception e) {
+            System.out.println("terjadi kkesallahn");
+        }
     }
 
 }

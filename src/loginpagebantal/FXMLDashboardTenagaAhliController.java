@@ -6,7 +6,10 @@ package loginpagebantal;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -15,9 +18,14 @@ import javafx.fxml.Initializable;
  */
 public class FXMLDashboardTenagaAhliController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private LineChart lcKunjungan;
+    
+    @FXML
+    private TableView tvKonsultasi;
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
