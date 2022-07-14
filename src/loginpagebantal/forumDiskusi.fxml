@@ -34,22 +34,18 @@
                               <Image url="@../gambar/Bantuan%20Kesehatan%20Mental-2.png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="309.0" layoutY="52.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Tentang Kami">
+                        <Button fx:id="PelayananTerdekat" layoutX="380.0" layoutY="52.0" mnemonicParsing="false" onAction="#scene6" style="-fx-background-color: white;" text="Pelayanan Terdekat">
                            <font>
                               <Font name="PT Sans" size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="PelayananTerdekat" layoutX="511.0" layoutY="52.0" mnemonicParsing="false" onAction="#scene6" style="-fx-background-color: white;" text="Pelayanan Terdekat">
-                           <font>
-                              <Font name="PT Sans" size="14.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="432.0" layoutY="52.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Diskusi">
+                        <Button layoutX="533.0" layoutY="52.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Diskusi">
                            <font>
                               <Font name="PT Sans" size="14.0" />
                            </font>
                         </Button>
                         <TextField layoutX="875.0" layoutY="52.0" prefWidth="244.0" />
+                        <Button layoutX="45.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="103.0" prefWidth="197.0" text="Button" />
                      </children>
                   </Pane>
                </children>
