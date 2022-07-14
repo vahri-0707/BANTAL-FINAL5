@@ -15,9 +15,11 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -56,6 +58,20 @@ public class TableKonsultasiController implements Initializable {
     
     ObservableList datakonsultasi = observableArrayList();
     XStream xstream = new XStream(new StaxDriver());
+    
+    @FXML
+    private void hapusButton(ActionEvent event) {
+        TableView.TableViewSelectionModel selectionModel = TableKonsultasi.getSelectionModel();
+        selectionModel.setSelectionMode(SelectionMode.SINGLE);
+        int i = selectionModel.getSelectedIndex();
+
+        if (i >= 0) {
+            datakonsultasi.remove(i);
+            listKon.remove(i);
+        }
+
+        simpanData();
+    }
     
     void OpenData() {
         
