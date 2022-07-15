@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="925.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.TableKonsultasiController">
    <children>
-      <Pane layoutX="31.0" layoutY="37.0" prefHeight="535.0" prefWidth="862.0" style="-fx-background-color: EAF5E8;">
+      <Pane layoutX="32.0" layoutY="29.0" prefHeight="553.0" prefWidth="862.0" style="-fx-background-color: EAF5E8; -fx-background-radius: 20;">
          <children>
             <Button fx:id="Simpan" layoutX="36.0" layoutY="32.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #4DD1A9;" text="Simpan">
                <effect>

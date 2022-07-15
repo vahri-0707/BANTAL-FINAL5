@@ -11,9 +11,9 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="1331.0" style="-fx-background-color: EAF5E8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLmemantauPerkembanganChartController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1331.0" style="-fx-background-color: EAF5E8; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLmemantauPerkembanganChartController">
     <children>
-      <Pane layoutX="9.0" layoutY="63.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
+      <Pane layoutX="10.0" layoutY="18.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
          <effect>
             <DropShadow offsetX="3.0" offsetY="3.0">
                <color>
@@ -36,7 +36,7 @@
             </LineChart>
          </children>
       </Pane>
-      <Pane layoutX="456.0" layoutY="63.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
+      <Pane layoutX="457.0" layoutY="18.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
          <effect>
             <DropShadow offsetX="3.0" offsetY="3.0">
                <color>
@@ -52,7 +52,7 @@
             <PieChart fx:id="pcGejala" layoutX="43.0" layoutY="70.0" prefHeight="257.0" prefWidth="332.0" />
          </children>
       </Pane>
-      <Pane layoutX="901.0" layoutY="63.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
+      <Pane layoutX="902.0" layoutY="18.0" prefHeight="362.0" prefWidth="418.0" style="-fx-background-radius: 10; -fx-background-color: white;">
          <effect>
             <DropShadow offsetX="3.0" offsetY="3.0">
                <color>
