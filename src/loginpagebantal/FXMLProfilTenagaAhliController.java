@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -32,29 +33,96 @@ import javafx.stage.Stage;
  */
 public class FXMLProfilTenagaAhliController implements Initializable {
 
+//    @FXML
+//    private Button logout;
+//    
+//    @FXML
+//    private Button SImpan;
+//
+//    @FXML
+//    private ToggleGroup kelam;
+//
+//    @FXML
+//    private Label label;
+//
+//    @FXML
+//    private RadioButton rbPria;
+//
+//    @FXML
+//    private RadioButton rbWanita;
+//
+//    @FXML
+//    private TextField tKota;
+//
+//    @FXML
+//    private TextField tfEmail;
+//
+//    @FXML
+//    private TextField tfNama;
+//
+//    @FXML
+//    private TextField tfNoHP;
+//
+//    @FXML
+//    private TextField tfPengalamanKerja;
+//
+//    @FXML
+//    private TextField tfJenjangPendidikan;
+//
+//    @FXML
+//    private TextField tfTanggalLahir;
+//
+//    @FXML
+//    private TextField tfpassword;
+//    
+//    @FXML
+//    private TextField JenKelamin;
+    
+    
+//      @FXML
+//    private TextField JenKelamin;
+//
+//    @FXML
+//    private TextField tKota;
+//
+//    @FXML
+//    private TextField tfEmail;
+//
+//    @FXML
+//    private TextField tfJenjangPendidikan;
+//
+//    @FXML
+//    private TextField tfNama;
+//
+//    @FXML
+//    private TextField tfNoHP;
+//
+//    @FXML
+//    private TextField tfPengalamanKerja;
+//
+//    @FXML
+//    private TextField tfTanggalLahir;
+//
+//    @FXML
+//    private TextField tfpassword;
+//    
+//    @FXML
+//    private Button logout;
+    
+     @FXML
+    private TextField JenKelamin;
+
     @FXML
     private Button logout;
-    
-    @FXML
-    private Button SImpan;
-
-    @FXML
-    private ToggleGroup kelam;
-
-    @FXML
-    private Label label;
-
-    @FXML
-    private RadioButton rbPria;
-
-    @FXML
-    private RadioButton rbWanita;
 
     @FXML
     private TextField tKota;
 
     @FXML
     private TextField tfEmail;
+
+    @FXML
+    private TextField tfJenjangPendidikan;
 
     @FXML
     private TextField tfNama;
@@ -66,16 +134,12 @@ public class FXMLProfilTenagaAhliController implements Initializable {
     private TextField tfPengalamanKerja;
 
     @FXML
-    private TextField tfJenjangPendidikan;
-
-    @FXML
     private TextField tfTanggalLahir;
 
     @FXML
-    private TextField tfpassword;
-    
-    @FXML
-    private TextField JenKelamin;
+    private PasswordField tfpassword;
+
+
     
      java.util.ArrayList< DaftarTenagaAhli> listpendaftarantnahli = new java.util.ArrayList<DaftarTenagaAhli>();
 

@@ -40,12 +40,12 @@
                            </font>
                         </Text>
                         <Line endX="186.0" layoutX="89.0" layoutY="147.0" startX="-100.0" />
-                        <Button fx:id="Dashboard" alignment="BASELINE_LEFT" layoutX="12.0" layoutY="178.0" mnemonicParsing="false" onAction="#scene8" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: white;" text="           Dasbor">
+                        <Button alignment="BASELINE_LEFT" layoutX="12.0" layoutY="178.0" mnemonicParsing="false" onAction="#Dashboardpsien" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: white;" text="           Dasbor">
                            <font>
                               <Font name="PT Sans" size="16.0" />
                            </font>
                         </Button>
-                        <Button fx:id="bProfil" alignment="BASELINE_LEFT" layoutX="12.0" layoutY="228.0" mnemonicParsing="false" onAction="#sceneProfil" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: white;" text="           Profil">
+                        <Button alignment="BASELINE_LEFT" layoutX="12.0" layoutY="228.0" mnemonicParsing="false" onAction="#sceneProfil" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: white;" text="           Profil">
                            <font>
                               <Font name="PT Sans" size="16.0" />
                            </font>
@@ -90,7 +90,7 @@
                         <Font name="PT Sans" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Pelayananterdekat" mnemonicParsing="false" onAction="#scene2" style="-fx-background-color: white;" text="Pelayanan Terdekat">
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Pelayanan Terdekat">
                      <HBox.margin>
                         <Insets left="20.0" top="50.0" />
                      </HBox.margin>
@@ -98,7 +98,7 @@
                         <Font name="PT Sans" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Diskusi" mnemonicParsing="false" onAction="#scene3" style="-fx-background-color: white;" text="Diskusi">
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Diskusi">
                      <font>
                         <Font name="PT Sans" size="14.0" />
                      </font>
@@ -155,13 +155,13 @@
                               <Font name="PT Sans" size="18.0" />
                            </font>
                         </Text>
-                        <TableView fx:id="tvKonsultasi" layoutX="19.0" layoutY="50.0" prefHeight="200.0" prefWidth="848.0">
+                        <TableView fx:id="TableKonsultasi" layoutX="19.0" layoutY="50.0" prefHeight="200.0" prefWidth="848.0" stylesheets="@../css/csstableview.css">
                           <columns>
-                            <TableColumn prefWidth="260.872314453125" text="Alamat" />
-                            <TableColumn prefWidth="194.0" text="Keluhan" />
-                              <TableColumn prefWidth="156.50006103515625" text="Tanggal &amp; Hari" />
-                              <TableColumn prefWidth="120.39801025390625" text="Tatap Muka" />
-                              <TableColumn prefWidth="120.39801025390625" text="Waktu" />
+                            <TableColumn fx:id="Alamat" prefWidth="260.872314453125" text="Alamat" />
+                            <TableColumn fx:id="Keluhan" prefWidth="194.0" text="Keluhan" />
+                              <TableColumn fx:id="Tanggalhari" prefWidth="156.50006103515625" text="Tanggal &amp; Hari" />
+                              <TableColumn fx:id="tatapmuka" prefWidth="120.39801025390625" text="Tatap Muka" />
+                              <TableColumn fx:id="tcwaktu" prefWidth="120.39801025390625" text="Waktu" />
                           </columns>
                         </TableView>
                      </children>

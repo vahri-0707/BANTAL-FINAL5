@@ -38,7 +38,7 @@
             <Font name="PT Sans" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="1062.0" layoutY="24.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #5dd1a9;" text="Daftar">
+      <Button fx:id="Daftar" layoutX="1062.0" layoutY="24.0" mnemonicParsing="false" onAction="#daftar" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #5dd1a9;" text="Daftar">
          <font>
             <Font size="15.0" />
          </font>
@@ -126,7 +126,7 @@
             <Font name="Avenir Book" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="509.0" layoutY="412.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #5dd1a9;" text="Mulai Sekarang">
+      <Button fx:id="Login" layoutX="509.0" layoutY="412.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #5dd1a9;" text="Mulai Sekarang">
          <font>
             <Font size="15.0" />
          </font>

@@ -75,8 +75,7 @@ public class FXMLPendaftaran2Controller implements Initializable {
     @FXML
     private TextField tfpassword;
 
-    @FXML
-    private TextField tfJenKelamin;
+  
 //  ChoiceBox
     private String Nama, Email, Password, TanggalLahir, PengalamanKerja, JenjangPendidikan, nomorhp, kotadankab, Jkelamin;
     XStream xstream = new XStream(new StaxDriver());
@@ -115,7 +114,6 @@ public class FXMLPendaftaran2Controller implements Initializable {
         PengalamanKerja = (String) tfPengalamanKerja.getText();
         nomorhp = (String) tfNoHP.getText();
         kotadankab = (String) tKota.getText();
-        Jkelamin = (String) tfJenKelamin.getText();
         listpendaftaranTenagaAhli.add(new DaftarTenagaAhli(Nama, Email, Password, TanggalLahir, PengalamanKerja, JenjangPendidikan, nomorhp, kotadankab, Jkelamin));
         SaveAndCreate();
 

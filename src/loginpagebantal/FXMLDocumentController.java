@@ -108,6 +108,15 @@ public class FXMLDocumentController implements Initializable {
                 stage.show();
                 Stage Keluar = (Stage) login.getScene().getWindow();
                 Keluar.close();
+                
+                Parent scene3 = FXMLLoader.load(getClass().getResource("FXMLDashboardTenagaAhli.fxml"));
+                Scene coba = new Scene(scene3);
+                Stage hai = new Stage();
+                stage.setScene(scene);
+                stage.setTitle("Dashboard");
+                stage.show();
+                Stage close = (Stage) login.getScene().getWindow();
+                close.close();
             
             } 
             else{
