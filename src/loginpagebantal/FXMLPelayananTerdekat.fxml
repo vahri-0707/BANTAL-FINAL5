@@ -20,17 +20,12 @@
                   <Image url="@../gambar/Bantuan%20Kesehatan%20Mental-2.png" />
                </image>
             </ImageView>
-            <Button layoutX="312.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Tentang Kami">
+            <Button layoutX="341.0" layoutY="50.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Pelayanan Terdekat">
                <font>
                   <Font name="PT Sans" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="430.0" layoutY="50.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Pelayanan Terdekat">
-               <font>
-                  <Font name="PT Sans" size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="Diskusi" layoutX="581.0" layoutY="49.0" mnemonicParsing="false" onAction="#diskusi" style="-fx-background-color: white;" text="Diskusi">
+            <Button fx:id="Diskusi" layoutX="492.0" layoutY="49.0" mnemonicParsing="false" onAction="#diskusi" style="-fx-background-color: white;" text="Diskusi">
                <font>
                   <Font name="PT Sans" size="14.0" />
                </font>
