@@ -1,194 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-color: EAF5E8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLHomePageController">
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginpagebantal.FXMLHomePageController">
    <children>
-      <ImageView fitHeight="801.0" fitWidth="1202.0" layoutX="-1.0" layoutY="130.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="801.0" fitWidth="1200.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../gambar/19742.jpg" />
+            <Image url="@../gambar/rm222batch3-mind-06.jpg" />
          </image>
       </ImageView>
-      <Pane prefHeight="130.0" prefWidth="1200.0" style="-fx-background-color: white;">
-         <children>
-            <ImageView fitHeight="130.0" fitWidth="156.0" layoutX="67.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../gambar/Bantuan%20Kesehatan%20Mental-2.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="312.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Tentang Kami">
-               <font>
-                  <Font name="PT Sans" size="14.0" />
-               </font>
-            </Button>
-            <Button layoutX="430.0" layoutY="50.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Pelayanan Terdekat">
-               <font>
-                  <Font name="PT Sans" size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="Diskusi" layoutX="581.0" layoutY="49.0" mnemonicParsing="false" onAction="#scene5" style="-fx-background-color: white;" text="Diskusi">
-               <font>
-                  <Font name="PT Sans" size="14.0" />
-               </font>
-            </Button>
-            <TextField layoutX="874.0" layoutY="50.0" prefWidth="244.0" />
-         </children>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Pane>
-      <Pane layoutX="32.0" layoutY="407.0" prefHeight="303.0" prefWidth="261.0" style="-fx-background-color: white; -fx-background-radius: 20;">
-         <children>
-            <ImageView fitHeight="283.0" fitWidth="262.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../gambar/Personality%20disorder-rafiki-2.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="79.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mengatasi">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font></Text>
-            <Text layoutX="32.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masalah Kepribadian">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font></Text>
-         </children>
-         <effect>
-            <DropShadow offsetX="3.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.5" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Pane>
-      <Pane layoutX="323.0" layoutY="408.0" prefHeight="303.0" prefWidth="261.0" style="-fx-background-color: white; -fx-background-radius: 20;">
-         <children>
-            <ImageView fitHeight="283.0" fitWidth="262.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../gambar/Anxiety-rafiki.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="79.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mengatasi">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-            <Text layoutX="37.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masalah Kecemasan">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-         </children>
-         <effect>
-            <DropShadow offsetX="3.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.5" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Pane>
-      <Pane layoutX="614.0" layoutY="407.0" prefHeight="303.0" prefWidth="261.0" style="-fx-background-color: white; -fx-background-radius: 20;">
-         <children>
-            <ImageView fitHeight="283.0" fitWidth="262.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../gambar/Eating%20disorder-rafiki.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="80.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mengatasi">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-            <Text layoutX="24.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masalah Mogok Makan">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-         </children>
-         <effect>
-            <DropShadow offsetX="3.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.5" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Pane>
-      <Pane layoutX="905.0" layoutY="408.0" prefHeight="303.0" prefWidth="261.0" style="-fx-background-color: white; -fx-background-radius: 20;">
-         <children>
-            <ImageView fitHeight="283.0" fitWidth="262.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../gambar/Feeling%20angry-rafiki.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="79.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mengatasi">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-            <Text layoutX="28.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masalah Suasana Hati ">
-               <font>
-                  <Font name="Avenir Next Bold" size="19.0" />
-               </font>
-            </Text>
-         </children>
-         <effect>
-            <DropShadow offsetX="3.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.5" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Pane>
-      <Text fill="#5dd1a9" layoutX="32.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANTAL">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="56.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/LogoBantal.png" />
+         </image>
+      </ImageView>
+      <Text fill="#5dd1a9" layoutX="746.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Halaman Utama">
          <font>
-            <Font name="Avenir Next Bold" size="45.0" />
+            <Font name="PT Sans" size="14.0" />
          </font>
       </Text>
-      <Text layoutX="32.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banyak menghabiskan waktu di rumah memang tidak mudah bagi sebagian &#10;besar orang, terlebih apabila dilakukan dalam kurun waktu yang lama. Stres, gelisah, &#10;kecemasan, dan depresi merupakan kondisi mental yang marak terjadi saat pandemi. Untuk &#10;itulah BANTAL hadir, kami menyediakan sarana bagi orang-orang yang memiliki masalah &#10;kesehatan mental untuk dapat menyalurkan masalah tersebut kepada tenaga ahli &#10;dengan cara berkonsultasi. Memiliki kondisi mental dan pemikiran yang sehat &#10;adalah amunisi bagi tubuh agar terhindar dari penyakit. &#10;&#10;&#10;">
+      <Text layoutX="862.0" layoutY="43.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Tentang Kami">
          <font>
-            <Font name="PT Sans" size="16.0" />
-         </font></Text>
-      <Pane layoutX="696.0" layoutY="169.0" prefHeight="200.0" prefWidth="469.0" style="-fx-background-color: white; -fx-background-radius: 20;">
-         <effect>
-            <DropShadow offsetX="3.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.5" />
-               </color>
-            </DropShadow>
-         </effect>
+            <Font name="PT Sans" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="966.0" layoutY="43.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontak Kami">
+         <font>
+            <Font name="PT Sans" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="1062.0" layoutY="24.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #5dd1a9;" text="Daftar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="403.0" fitWidth="605.0" layoutX="10.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/portrait-hansome-young-male-doctor-man__1_-removebg.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="185.0" layoutY="509.0" prefHeight="200.0" prefWidth="200.0" />
+      <Pane layoutX="99.0" layoutY="488.0" prefHeight="200.0" prefWidth="1003.0" style="-fx-background-color: #FBFDF9; -fx-background-radius: 20;">
          <children>
-            <ImageView fitHeight="235.0" fitWidth="239.0" layoutX="16.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="174.0" fitWidth="174.0" layoutX="261.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../gambar/Consulting-rafiki.png" />
+                  <Image url="@../gambar/Health%20_Monochromatic-2.png" />
                </image>
             </ImageView>
-            <Button layoutX="261.0" layoutY="148.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="184.0" style="-fx-background-color: #5dd1a9; -fx-background-radius: 5;" text="Mulai Konsultasi">
+            <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="526.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/Video%20call_Monochromatic.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="174.0" fitWidth="174.0" layoutX="783.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/Online%20presentation_Monochromatic-2.png" />
+               </image>
+            </ImageView>
+            <Text fill="#5dd1a9" layoutX="63.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FITUR">
                <font>
-                  <Font name="PT Sans" size="16.0" />
+                  <Font name="Avenir Next Condensed Bold" size="40.0" />
                </font>
-               <effect>
-                  <DropShadow offsetX="3.0" offsetY="3.0">
-                     <color>
-                        <Color opacity="0.5" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Text layoutX="264.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dengan berkonsultasi, kamu &#10;dapat lebih mudah untuk &#10;menyelesaikan masalahmu, &#10;kami menjamin privasi anda &#10;tetap terjaga." textAlignment="JUSTIFY">
+            </Text>
+            <Text fill="#5dd1a9" layoutX="64.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANTAL">
                <font>
-                  <Font name="PT Sans" size="15.0" />
+                  <Font name="Avenir Next Condensed Bold" size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="59.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FITUR">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="60.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANTAL">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="29.0" />
+               </font>
+            </Text>
+            <Line endX="-3.5" endY="108.08001708984375" layoutX="217.0" layoutY="79.0" opacity="0.2" startX="-3.5" startY="-64.91998291015625" />
+            <Line endX="-3.5" endY="108.08001708984375" layoutX="485.0" layoutY="79.0" opacity="0.2" startX="-3.5" startY="-64.91998291015625" />
+            <Line endX="-3.5" endY="108.08001708984375" layoutX="744.0" layoutY="79.0" opacity="0.2" startX="-3.5" startY="-64.91998291015625" />
+            <Text layoutX="776.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      Konsultasi online dengan &#10;ahli seperti Dokter atau Psikolog">
+               <font>
+                  <Font name="Avenir Book" size="13.0" />
+               </font></Text>
+            <Text layoutX="257.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    Memantau Perkembangan &#10;yang dilakukan oleh tenaga ahli">
+               <font>
+                  <Font name="Avenir Book" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="503.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forum diskusi yang dapat digunakan &#10;     untuk sharing antar pengguna">
+               <font>
+                  <Font name="Avenir Book" size="13.0" />
                </font>
             </Text>
          </children>
-      </Pane>
-      </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.364705890417099" green="0.8196078538894653" blue="0.6627451181411743" opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect></Pane>
+      <Text layoutX="510.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atasi masalah ">
+         <font>
+            <Font name="Avenir Next Condensed Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="510.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kesehatan mentalmu">
+         <font>
+            <Font name="Avenir Next Condensed Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="511.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banyak menghabiskan waktu di rumah memang tidak mudah bagi sebagian &#10;besar orang, terlebih apabila dilakukan dalam kurun waktu yang lama. Stres, &#10;gelisah, kecemasan, dan depresi merupakan kondisi mental yang marak terjadi &#10;saat pandemi. Untuk itulah BANTAL hadir, kami menyediakan sarana bagi &#10;orang-orang yang memiliki masalah kesehatan mental untuk dapat menyalurkan &#10;masalah tersebut kepada tenaga ahli dengan cara berkonsultasi. Memiliki kondisi &#10;mental dan pemikiran yang sehat adalah amunisi bagi tubuh agar terhindar dari &#10;penyakit. &#10;&#10;&#10;">
+         <font>
+            <Font name="Avenir Book" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="509.0" layoutY="412.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #5dd1a9;" text="Mulai Sekarang">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
