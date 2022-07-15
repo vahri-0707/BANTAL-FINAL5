@@ -71,6 +71,16 @@ public class FXMLprofilController implements Initializable {
     Indeks ind;
     Daftar p;
     
+    
+     @FXML
+    private void editTanggalLahir (ActionEvent event) throws IOException {
+        String tampung = tfTanggalLahir.getText();
+        p.setTanggallahir(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
      @FXML
     private void editEmail (ActionEvent event) throws IOException {
         String tampung = tfEmail.getText();
@@ -79,6 +89,67 @@ public class FXMLprofilController implements Initializable {
         listpendaftaranpsn.set(indeks, p);
         simpanData();
     }
+     
+    @FXML
+    private void editpassword (ActionEvent event) throws IOException {
+        String tampung = tfpassword.getText();
+        p.setPassword(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+       
+
+    @FXML
+    private void editjeniskelamin (ActionEvent event) throws IOException {
+        String tampung = Jenkelamin.getText();
+        p.setJenisKelamin(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
+    
+    @FXML
+    private void editnohp (ActionEvent event) throws IOException {
+        String tampung = tfNoHP.getText();
+        p.setNomorhp(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
+    
+    @FXML
+    private void editriwayatkesehatanmental (ActionEvent event) throws IOException {
+        String tampung = tfRiwayat.getText();
+        p.setRiwayatKesehatan(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
+    
+    @FXML
+    private void editpekerjaan (ActionEvent event) throws IOException {
+        String tampung = tfPekerjaan.getText();
+        p.setPekerjaan(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
+     
+    @FXML
+    private void editkota (ActionEvent event) throws IOException {
+        String tampung = tKota.getText();
+        p.setKabdankota(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    
+    
     @FXML
     private void keluar(ActionEvent event) throws IOException {
         Parent scene2 = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));

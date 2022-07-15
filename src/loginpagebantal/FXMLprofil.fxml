@@ -99,7 +99,7 @@
                </font>
             </Text>
             <PasswordField fx:id="tfpassword" layoutX="157.0" layoutY="381.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Button layoutX="356.0" layoutY="288.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="288.0" mnemonicParsing="false" onAction="#editTanggalLahir" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
@@ -109,12 +109,12 @@
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="356.0" layoutY="384.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="384.0" mnemonicParsing="false" onAction="#editpassword" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="356.0" layoutY="475.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="481.0" mnemonicParsing="false" onAction="#editnohp" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
@@ -137,17 +137,17 @@
                </font>
             </Text>
             <PasswordField fx:id="tKota" layoutX="579.0" layoutY="371.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 8;" />
-            <Button layoutX="776.0" layoutY="275.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="776.0" layoutY="275.0" mnemonicParsing="false" onAction="#editriwayatkesehatanmental" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="777.0" layoutY="325.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="777.0" layoutY="325.0" mnemonicParsing="false" onAction="#editpekerjaan" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
             </Button>
-            <Button layoutX="777.0" layoutY="375.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="777.0" layoutY="375.0" mnemonicParsing="false" onAction="#editkota" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
@@ -157,7 +157,7 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button layoutX="356.0" layoutY="436.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
+            <Button layoutX="356.0" layoutY="436.0" mnemonicParsing="false" onAction="#editjeniskelamin" prefHeight="19.0" prefWidth="28.0" style="-fx-background-color: white;" text="Edit" textFill="#5dd1a9" underline="true">
                <font>
                   <Font name="PT Sans" size="9.0" />
                </font>
