@@ -69,8 +69,17 @@ public class FXMLprofilController implements Initializable {
 
     XStream xstream = new XStream(new StaxDriver());
     Indeks ind;
+    Daftar p;
     
      @FXML
+    private void editEmail (ActionEvent event) throws IOException {
+        String tampung = tfEmail.getText();
+        p.setEmail(tampung);
+        int indeks = ind.getInd();
+        listpendaftaranpsn.set(indeks, p);
+        simpanData();
+    }
+    @FXML
     private void keluar(ActionEvent event) throws IOException {
         Parent scene2 = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene = new Scene(scene2);
@@ -145,11 +154,9 @@ public class FXMLprofilController implements Initializable {
         simpanData();
         OpenIndeks();
 
-        for (int i = 0; i < listpendaftaranpsn.size(); i++) {
-            System.out.println(listpendaftaranpsn.toString());
-        }
+       
 
-        Daftar p = listpendaftaranpsn.get(ind.getInd());
+        p = listpendaftaranpsn.get(ind.getInd());
         tfNama.setText(p.getNama());
         tfEmail.setText(p.getEmail());
         tfpassword.setText(p.getPassword());
